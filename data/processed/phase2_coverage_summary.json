@@ -1,0 +1,368 @@
+{
+  "denominators": {
+    "master_unique_wells": 476869,
+    "drilled_universe_wells": 419777,
+    "paper_wells_excluded": 57092,
+    "las_available_wells": 23955
+  },
+  "headline": {
+    "pct_of_master_with_las": 5.02,
+    "pct_of_drilled_with_las": 5.69
+  },
+  "by_decade": [
+    {
+      "decade": 1840,
+      "total": 1,
+      "with_las": 0,
+      "pct_with_las": 0.0
+    },
+    {
+      "decade": 1850,
+      "total": 1,
+      "with_las": 0,
+      "pct_with_las": 0.0
+    },
+    {
+      "decade": 1860,
+      "total": 1,
+      "with_las": 0,
+      "pct_with_las": 0.0
+    },
+    {
+      "decade": 1880,
+      "total": 1,
+      "with_las": 0,
+      "pct_with_las": 0.0
+    },
+    {
+      "decade": 1890,
+      "total": 1,
+      "with_las": 0,
+      "pct_with_las": 0.0
+    },
+    {
+      "decade": 1900,
+      "total": 33,
+      "with_las": 0,
+      "pct_with_las": 0.0
+    },
+    {
+      "decade": 1910,
+      "total": 352,
+      "with_las": 3,
+      "pct_with_las": 0.9
+    },
+    {
+      "decade": 1920,
+      "total": 3549,
+      "with_las": 1,
+      "pct_with_las": 0.0
+    },
+    {
+      "decade": 1930,
+      "total": 10803,
+      "with_las": 50,
+      "pct_with_las": 0.5
+    },
+    {
+      "decade": 1940,
+      "total": 22307,
+      "with_las": 168,
+      "pct_with_las": 0.8
+    },
+    {
+      "decade": 1950,
+      "total": 42869,
+      "with_las": 632,
+      "pct_with_las": 1.5
+    },
+    {
+      "decade": 1960,
+      "total": 30387,
+      "with_las": 742,
+      "pct_with_las": 2.4
+    },
+    {
+      "decade": 1970,
+      "total": 33886,
+      "with_las": 974,
+      "pct_with_las": 2.9
+    },
+    {
+      "decade": 1980,
+      "total": 63285,
+      "with_las": 1725,
+      "pct_with_las": 2.7
+    },
+    {
+      "decade": 1990,
+      "total": 23747,
+      "with_las": 739,
+      "pct_with_las": 3.1
+    },
+    {
+      "decade": 2000,
+      "total": 30542,
+      "with_las": 4390,
+      "pct_with_las": 14.4
+    },
+    {
+      "decade": 2010,
+      "total": 33702,
+      "with_las": 12693,
+      "pct_with_las": 37.7
+    },
+    {
+      "decade": 2020,
+      "total": 7628,
+      "with_las": 1497,
+      "pct_with_las": 19.6
+    }
+  ],
+  "county_top20_by_well_count": [
+    {
+      "County": "Barton",
+      "total": 17448,
+      "with_las": 778,
+      "pct_with_las": 4.5
+    },
+    {
+      "County": "Montgomery",
+      "total": 17380,
+      "with_las": 357,
+      "pct_with_las": 2.1
+    },
+    {
+      "County": "Ellis",
+      "total": 15538,
+      "with_las": 1158,
+      "pct_with_las": 7.5
+    },
+    {
+      "County": "Allen",
+      "total": 15380,
+      "with_las": 444,
+      "pct_with_las": 2.9
+    },
+    {
+      "County": "Butler",
+      "total": 14773,
+      "with_las": 243,
+      "pct_with_las": 1.6
+    },
+    {
+      "County": "Russell",
+      "total": 13603,
+      "with_las": 480,
+      "pct_with_las": 3.5
+    },
+    {
+      "County": "Greenwood",
+      "total": 12598,
+      "with_las": 215,
+      "pct_with_las": 1.7
+    },
+    {
+      "County": "Neosho",
+      "total": 12111,
+      "with_las": 1165,
+      "pct_with_las": 9.6
+    },
+    {
+      "County": "Miami",
+      "total": 12092,
+      "with_las": 114,
+      "pct_with_las": 0.9
+    },
+    {
+      "County": "Woodson",
+      "total": 11866,
+      "with_las": 400,
+      "pct_with_las": 3.4
+    },
+    {
+      "County": "Chautauqua",
+      "total": 11338,
+      "with_las": 262,
+      "pct_with_las": 2.3
+    },
+    {
+      "County": "Stafford",
+      "total": 11209,
+      "with_las": 522,
+      "pct_with_las": 4.7
+    },
+    {
+      "County": "Cowley",
+      "total": 11125,
+      "with_las": 339,
+      "pct_with_las": 3.0
+    },
+    {
+      "County": "Anderson",
+      "total": 10570,
+      "with_las": 556,
+      "pct_with_las": 5.3
+    },
+    {
+      "County": "Rice",
+      "total": 10434,
+      "with_las": 286,
+      "pct_with_las": 2.7
+    },
+    {
+      "County": "Rooks",
+      "total": 9836,
+      "with_las": 542,
+      "pct_with_las": 5.5
+    },
+    {
+      "County": "Wilson",
+      "total": 9772,
+      "with_las": 896,
+      "pct_with_las": 9.2
+    },
+    {
+      "County": "Graham",
+      "total": 8782,
+      "with_las": 641,
+      "pct_with_las": 7.3
+    },
+    {
+      "County": "Ness",
+      "total": 7673,
+      "with_las": 1147,
+      "pct_with_las": 14.9
+    },
+    {
+      "County": "Franklin",
+      "total": 7663,
+      "with_las": 53,
+      "pct_with_las": 0.7
+    }
+  ],
+  "county_best_coverage_top10": [
+    {
+      "County": "Wichita",
+      "total": 447,
+      "with_las": 194,
+      "pct_with_las": 43.4
+    },
+    {
+      "County": "Logan",
+      "total": 1815,
+      "with_las": 592,
+      "pct_with_las": 32.6
+    },
+    {
+      "County": "Gray",
+      "total": 571,
+      "with_las": 163,
+      "pct_with_las": 28.5
+    },
+    {
+      "County": "Scott",
+      "total": 1652,
+      "with_las": 434,
+      "pct_with_las": 26.3
+    },
+    {
+      "County": "Thomas",
+      "total": 1317,
+      "with_las": 306,
+      "pct_with_las": 23.2
+    },
+    {
+      "County": "Rawlins",
+      "total": 1794,
+      "with_las": 392,
+      "pct_with_las": 21.9
+    },
+    {
+      "County": "Cheyenne",
+      "total": 1423,
+      "with_las": 296,
+      "pct_with_las": 20.8
+    },
+    {
+      "County": "Hodgeman",
+      "total": 2860,
+      "with_las": 517,
+      "pct_with_las": 18.1
+    },
+    {
+      "County": "Ford",
+      "total": 1329,
+      "with_las": 212,
+      "pct_with_las": 16.0
+    },
+    {
+      "County": "Gove",
+      "total": 2945,
+      "with_las": 465,
+      "pct_with_las": 15.8
+    }
+  ],
+  "county_worst_coverage_top10": [
+    {
+      "County": "Johnson",
+      "total": 4171,
+      "with_las": 9,
+      "pct_with_las": 0.2
+    },
+    {
+      "County": "Jefferson",
+      "total": 822,
+      "with_las": 2,
+      "pct_with_las": 0.2
+    },
+    {
+      "County": "Franklin",
+      "total": 7663,
+      "with_las": 53,
+      "pct_with_las": 0.7
+    },
+    {
+      "County": "Miami",
+      "total": 12092,
+      "with_las": 114,
+      "pct_with_las": 0.9
+    },
+    {
+      "County": "McPherson",
+      "total": 6000,
+      "with_las": 57,
+      "pct_with_las": 1.0
+    },
+    {
+      "County": "Douglas",
+      "total": 2044,
+      "with_las": 21,
+      "pct_with_las": 1.0
+    },
+    {
+      "County": "Dickinson",
+      "total": 517,
+      "with_las": 6,
+      "pct_with_las": 1.2
+    },
+    {
+      "County": "Linn",
+      "total": 5817,
+      "with_las": 73,
+      "pct_with_las": 1.3
+    },
+    {
+      "County": "Sedgwick",
+      "total": 4427,
+      "with_las": 63,
+      "pct_with_las": 1.4
+    },
+    {
+      "County": "Saline",
+      "total": 1547,
+      "with_las": 23,
+      "pct_with_las": 1.5
+    }
+  ]
+}

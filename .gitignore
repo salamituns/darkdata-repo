@@ -1,0 +1,18 @@
+# Raw regulator pulls: large, reproducible from the scripts.
+# Run scripts/phase1_kgs_scan.py + scripts/permian/phase1_tx_rrc_pull.py +
+# scripts/permian/phase2_nm_ocd_pull.py to rebuild everything under data/raw/.
+data/raw/
+
+# Big intermediate. Regenerate by re-running phase2_kgs_merge.py.
+data/processed/phase2_kgs_master_with_las.csv
+data/processed/permian/
+
+# Python + editor
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+.idea/
+.DS_Store
+._*
