@@ -304,6 +304,18 @@ def fig3_cross_basin_matrix():
         'eagle_ford': None,     # Unmeasured
     }
 
+    # Per-basin label placement. Generic offsets cause collisions
+    # (Kansas at x=0 with a right-offset label lands on top of
+    # Appalachia). Each basin gets an explicit anchor + alignment.
+    LABEL_PLACEMENT = {
+        # bid:        (dx,   dy,   ha,      va)
+        'kansas':     (-1.0,  0.0, 'right', 'center'),
+        'appalachia': ( 1.5,  1.8, 'left',  'bottom'),
+        'anadarko':   ( 1.5, -0.6, 'left',  'top'),
+        'permian':    ( 1.5,  1.5, 'left',  'bottom'),
+        'williston':  (-1.5,  3.0, 'right', 'bottom'),
+    }
+
     # Plot 5 measured basins
     for bid in DISPLAY_ORDER:
         f = basin_by_id[bid]
@@ -314,24 +326,20 @@ def fig3_cross_basin_matrix():
         y = p['dark_pct']
         ax.scatter(x, y, s=300, c=p['color'], edgecolor=INK, linewidth=1.0,
                    alpha=0.85, zorder=4)
-        # Label
-        lbl_offset_x = 1.5
-        lbl_offset_y = 1.5
-        if bid == 'williston':
-            lbl_offset_x, lbl_offset_y = -1.5, 3.0
-            ha = 'right'
-        else:
-            ha = 'left'
-        ax.text(x + lbl_offset_x, y + lbl_offset_y, p['short'],
+        dx, dy, ha, va = LABEL_PLACEMENT.get(bid, (1.5, 1.5, 'left', 'bottom'))
+        ax.text(x + dx, y + dy, p['short'],
                 fontsize=11.5, color=INK, fontfamily='sans-serif',
-                fontweight='bold', va='bottom', ha=ha, zorder=5)
+                fontweight='bold', va=va, ha=ha, zorder=5)
 
-    # Trend line: dark % drops as horizontal share rises
+    # Trend line: dark % drops as horizontal share rises.
     ax.plot([0, 50], [97, 40], color=INK, linewidth=0.9, linestyle='--',
             alpha=0.35, zorder=2)
-    ax.text(45, 50, 'Horizontal era\nrescue trend',
+    # Annotation sits in the empty zone between Permian (28, 78) and
+    # Williston (47, 46), well clear of every data point label.
+    ax.text(33, 67, 'Horizontal era\nrescue trend',
             fontsize=9, color=MUTED, fontfamily='sans-serif',
-            fontstyle='italic', alpha=0.8, ha='right')
+            fontstyle='italic', alpha=0.85, ha='left', va='center',
+            rotation=-22)
 
     # Highlight: Williston is the only majority-lit basin
     ax.axhline(50, color=CLAY, linewidth=0.6, linestyle=':', alpha=0.35, zorder=1)
