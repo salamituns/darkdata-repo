@@ -308,12 +308,15 @@ def fig3_cross_basin_matrix():
     # (Kansas at x=0 with a right-offset label lands on top of
     # Appalachia). Each basin gets an explicit anchor + alignment.
     LABEL_PLACEMENT = {
-        # bid:        (dx,   dy,   ha,      va)
-        'kansas':     (-1.0,  0.0, 'right', 'center'),
-        'appalachia': ( 1.5,  1.8, 'left',  'bottom'),
-        'anadarko':   ( 1.5, -0.6, 'left',  'top'),
-        'permian':    ( 1.5,  1.5, 'left',  'bottom'),
-        'williston':  (-1.5,  3.0, 'right', 'bottom'),
+        # bid:        (dx,   dy,   ha,       va)
+        # Kansas sits at x=0 (left edge of chart). Center its label
+        # above the circle so it does not bleed into the y-axis area
+        # or visually merge with the Appalachia point (x=5, y=94.8).
+        'kansas':     ( 0.0,  2.0, 'center', 'bottom'),
+        'appalachia': ( 1.4,  1.6, 'left',   'bottom'),
+        'anadarko':   ( 1.5, -0.6, 'left',   'top'),
+        'permian':    ( 1.5,  1.5, 'left',   'bottom'),
+        'williston':  (-1.5,  3.0, 'right',  'bottom'),
     }
 
     # Plot 5 measured basins
