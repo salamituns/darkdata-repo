@@ -313,6 +313,47 @@ conus = states[~states['STUSPS'].isin(EXCLUDE)][['NAME', 'STUSPS', 'geometry']].
 (DATA/'conus_states.json').write_text(conus.to_json())
 print(f'  wrote {DATA/"conus_states.json"} ({len(conus)} states)')
 
+# Representative points per state (handles odd shapes like Florida or
+# Michigan more robustly than centroids). Used by the deck.gl TextLayer
+# to label each state on the primer map without overlapping bay water.
+print('Computing per-state representative label points...')
+label_points = []
+for _, row in conus.iterrows():
+    pt = row.geometry.representative_point()
+    label_points.append({
+        'usps': row['STUSPS'],
+        'name': row['NAME'],
+        'lon': float(pt.x),
+        'lat': float(pt.y),
+    })
+# Per-state nudges where the representative point lands awkwardly relative
+# to the visual mass of the state. Hand-tuned for this CONUS view.
+NUDGES = {
+    'MI': (1.4, -0.6),   # Lower Peninsula reads better than Upper
+    'MD': (-0.4, -0.1),
+    'DE': (0.0, -0.3),
+    'NJ': (0.1, -0.2),
+    'CT': (0.0, 0.1),
+    'RI': (0.1, 0.0),
+    'MA': (0.0, 0.1),
+    'NH': (0.0, 0.2),
+    'VT': (0.0, 0.2),
+    'LA': (-0.4, 0.5),   # Avoid the bayou tail
+    'FL': (1.0, 0.4),
+    'ID': (0.0, 0.3),
+    'WI': (0.4, -0.4),
+}
+for p in label_points:
+    if p['usps'] in NUDGES:
+        dx, dy = NUDGES[p['usps']]
+        p['lon'] += dx
+        p['lat'] += dy
+(DATA/'conus_state_labels.json').write_text(json.dumps({
+    'note': 'Per-state representative points for the deck.gl TextLayer used on the primer map. Generated from TIGER 2024 5m boundaries via geopandas representative_point with hand-tuned nudges.',
+    'labels': label_points,
+}))
+print(f'  wrote {DATA/"conus_state_labels.json"} ({len(label_points)} state labels)')
+
 
 # ============================================================
 # 4. EIA DPR multi-region production
